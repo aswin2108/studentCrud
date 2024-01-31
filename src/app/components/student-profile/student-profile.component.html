@@ -1,1 +1,107 @@
-<p>student-profile works!</p>
+<!-- profile.component.html -->
+<section style="background-color: #eee; height: 100vh;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img [src]="student.avatar" alt="Student Avatar" class="rounded-circle img-fluid" style="width: 150px;">
+              <h5 class="my-3">{{ student.name }}</h5>
+              <p class="text-muted mb-1">ID: {{ student.id }}</p>
+              <div class="d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-outline-danger ms-1" (click)="deleteStudent()">Delete</button>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Full Name</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.name }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Email</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.email }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Phone</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.phone }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Mark in Maths</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.mark1 }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Mark in Computer</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.mark2 }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Marks in English</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.mark3 }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Total</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.total }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Percentage</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.percentage }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Grade</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ student.grade }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

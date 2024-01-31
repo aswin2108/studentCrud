@@ -20,4 +20,22 @@ export class studentService {
       })
     );
   }
+
+  getOneStudent(id:number):Observable<StudentData>{
+    return this.http.get<StudentData>(`${this.apiUrl}/${id}`).pipe(
+      catchError((error) => {
+        console.error('Error fetching data:', error);
+        throw error;
+      })
+    );
+  }
+
+  deleteStudent(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
+      catchError((error) => {
+        console.error('Error deleting student:', error);
+        throw error;
+      })
+    );
+  }
 }
