@@ -1,0 +1,25 @@
+<!-- <p>students works!</p> -->
+<div *ngIf="students.length > 0">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th >ID</th>
+          <th >Avatar</th>
+          <th >Name</th>
+          <th >Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td >{{ student.id }}</td>
+          <td><img [src]="student.avatar" alt="Avatar" width="50" height="50"></td>
+          <td>{{ student.name }}</td>
+          <td>
+            <button (click)="navigateToProfile(student.id)">View Profile</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  

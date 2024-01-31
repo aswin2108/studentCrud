@@ -7,6 +7,10 @@
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
           <form [formGroup]="loginForm">
+
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0">Login Page</p>
+            </div>
   
             <!-- Email input -->
             <div class="form-outline mb-4">
@@ -14,8 +18,8 @@
                 placeholder="Enter a valid email address" name="email" formControlName="email" />
               <label class="form-label" for="form3Example3">Email address</label>
               <small *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched)" class="d-block link-danger">
-                <div *ngIf="loginForm.get('email').errors.required">Email is required.</div>
-                <div *ngIf="loginForm.get('email').errors.email">Email should be valid.</div>
+                <div *ngIf="loginForm.get('email').hasError('required')">Email is required.</div>
+                <div *ngIf="loginForm.get('email').hasError('email')">Email should be valid.</div>
             </small>
             </div>
             
@@ -23,11 +27,10 @@
             <!-- Password input -->
             <div class="form-outline mb-3">
               <input type="password" id="form3Example4" class="form-control form-control-lg"
-                placeholder="Enter password" />
-              <label class="form-label" for="form3Example4">Password</label>
-              <small *ngIf="loginForm.get('password').invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="d-block">
-                <div *ngIf="loginForm.get('password').errors.required">Email is required.</div>
-                <div *ngIf="loginForm.get('password').errors.password">Email should be valid.</div>
+                placeholder="Enter password" formControlName="password" />
+              <label class="form-label" for="form3Example4" >Password</label>
+              <small *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)" class="d-block link-danger">
+                <div *ngIf="loginForm.get('password').hasError('required')">Password is required.</div>
             </small>
             </div>
   
@@ -37,7 +40,7 @@
   
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="button" class="btn btn-primary btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;" name="login">Login</button>
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" name="login" [disabled]="!loginForm.valid">Login</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/register"
                   class="link-danger">Register</a></p>
             </div>
