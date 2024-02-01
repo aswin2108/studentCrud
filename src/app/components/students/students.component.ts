@@ -27,6 +27,11 @@ export class StudentsComponent implements OnInit {
       }
     );
   }
+
+  /**
+   * Passing the id of the student and the funtion takes us to the profile page
+   * @param {studentId} sId - Student id whose view button was clicked  
+   */
   navigateToProfile(studentId: number): void {
     this.router.navigate(['/student', studentId]);
   }

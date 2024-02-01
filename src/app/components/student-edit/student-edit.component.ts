@@ -59,18 +59,21 @@ export class StudentEditComponent implements OnInit {
   }
 
   private calculateResult(): void {
-    // Convert mark values to numbers
     const mark1 = +this.student.mark1;
     const mark2 = +this.student.mark2;
     const mark3 = +this.student.mark3;
   
-    // Calculate total, percentage, and grade based on the three marks
     this.student.total = mark1 + mark2 + mark3;
-    this.student.percentage = (this.student.total / 300) * 100; // Assuming maximum marks for all three subjects is 100
+    this.student.percentage = (this.student.total / 300) * 100; 
     this.student.grade = this.calculateGrade(this.student.percentage);
   }
   
-
+  /**
+   * This function calculates the grade using percentage mark scored
+   * @param {percentage} p - Any number
+   * @returns {string} - The grade the student got
+   */
+  
   private calculateGrade(percentage: number): string {
     if (percentage >= 90) {
       return 'A';
