@@ -11,8 +11,6 @@
             <div class="divider d-flex align-items-center my-4">
               <p class="text-center fw-bold mx-3 mb-0">Register Page</p>
             </div>
-  
-            <!-- FullName input -->
             <div class="form-outline mb-4">
               <input type="fullName" id="fullName" class="form-control form-control-lg"
               placeholder="Enter a valid email address" name="fullName" formControlName="fullName" />
@@ -22,9 +20,6 @@
                   <div *ngIf="registerForm.get('fullName').hasError('pattern')">Full name should be valid.</div>
                 </small>
             </div>
-            
-           
-            <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="email" id="email" class="form-control form-control-lg"
                 placeholder="Enter a valid email address" name="email" formControlName="email" />
@@ -34,9 +29,6 @@
                 <div *ngIf="registerForm.get('email').hasError('email')">Email should be valid.</div>
             </small>
             </div>
-            
-  
-            <!-- Password input -->
             <div class="form-outline mb-3">
               <input type="password" id="password" class="form-control form-control-lg"
                 placeholder="Enter password" formControlName="password" />
@@ -45,8 +37,6 @@
                 <div *ngIf="registerForm.get('password').hasError('required')">Password is required.</div>
             </small>
             </div>
-
-            <!-- Confirm Password input -->
             <div class="form-outline mb-3">
               <input type="password" id="confirmPassword" class="form-control form-control-lg"
                 placeholder="Enter password" formControlName="confirmPassword" />
@@ -57,22 +47,15 @@
             <small *ngIf="registerForm.hasError('passwordMismatch') && registerForm.get('password').valid && registerForm.get('confirmPassword').valid" class="d-block link-danger">
                 Passwords should match.
               </small>
-              
-              
             </div>
-  
-  
             <div class="d-flex justify-content-between align-items-center">
-              
             </div>
-  
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="button" class="btn btn-primary btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;" name="login" [disabled]="!registerForm.valid">Register</button>
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" name="login" [disabled]="!registerForm.valid" (click)="registerToTable()">Register</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Already a member? <a routerLink="/login"
                   class="link-danger">Log in</a></p>
             </div>
-  
           </form>
         </div>
       </div>

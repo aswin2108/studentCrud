@@ -7,6 +7,7 @@ import { StudentsComponent } from './components/students/students.component';
 import { StudentProfileComponent } from './components/student-profile/student-profile.component';
 import { StudentEditComponent } from './components/student-edit/student-edit.component';
 import { StudentAddComponent } from './components/student-add/student-add.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -42,7 +43,7 @@ const routes: Routes = [
   },
   {
     path: '**', 
-    component: HomeComponent
+    component: ErrorPageComponent
   }
 ];
 

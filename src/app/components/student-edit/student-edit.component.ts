@@ -34,6 +34,9 @@ export class StudentEditComponent implements OnInit {
     );
   }
 
+  /**
+   * Updated the student info in the table
+   */
   updateStudent(): void {
     // Calculate total, percentage, and grade based on the three marks
     this.calculateResult();
@@ -42,12 +45,11 @@ export class StudentEditComponent implements OnInit {
     this.dataService.updateStudentDetails(this.student).subscribe(
       (updatedStudent) => {
         console.log('Student details updated successfully:', updatedStudent);
-        // Navigate back to the profile page after successful update
+        // Navigate back to the profile page
         this.router.navigate([`/student/${updatedStudent.id}`]);
       },
       (error) => {
         console.error('Error updating student details:', error);
-        // Handle error as needed
       }
     );
   }
@@ -58,6 +60,9 @@ export class StudentEditComponent implements OnInit {
     this.router.navigate([`/student/${this.student.id}`]);
   }
 
+  /**
+   * Calculates the total and percentage of marks
+   */
   private calculateResult(): void {
     const mark1 = +this.student.mark1;
     const mark2 = +this.student.mark2;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { RegisterForm } from 'src/app/interfaces/registerForm';
 import { passwordMatchValidator } from 'src/app/shared/password-match.directives';
@@ -12,7 +13,7 @@ import { passwordMatchValidator } from 'src/app/shared/password-match.directives
 export class RegisterComponent {
   registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.registerForm = this.fb.group({
@@ -21,7 +22,10 @@ export class RegisterComponent {
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
     }, {
-      validator: passwordMatchValidator // Use "validator" for custom validators
+      validator: passwordMatchValidator 
     }) as FormGroup & RegisterForm;
+  }
+  registerToTable():void{
+    this.router.navigate(['/student']);
   }
 }

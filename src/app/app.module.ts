@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentProfileComponent } from './components/student-profile/student-profile.component';
 import { StudentEditComponent } from './components/student-edit/student-edit.component';
 import { StudentAddComponent } from './components/student-add/student-add.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StudentAddComponent } from './components/student-add/student-add.compon
     StudentsComponent,
     StudentProfileComponent,
     StudentEditComponent,
-    StudentAddComponent
+    StudentAddComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
