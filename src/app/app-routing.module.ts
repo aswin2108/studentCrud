@@ -5,6 +5,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { StudentsComponent } from './components/students/students.component';
 import { StudentProfileComponent } from './components/student-profile/student-profile.component';
+import { StudentEditComponent } from './components/student-edit/student-edit.component';
+import { StudentAddComponent } from './components/student-add/student-add.component';
 
 const routes: Routes = [
   {
@@ -24,8 +26,16 @@ const routes: Routes = [
     component: StudentsComponent
   },
   { 
-    path: 'profile/:id', 
+    path: 'students/add', 
+    component: StudentAddComponent 
+  },
+  { 
+    path: 'student/:id', 
     component: StudentProfileComponent 
+  },
+  {
+    path: 'student/:id/edit',
+    component: StudentEditComponent
   },
   {
     path: '', redirectTo: 'home', pathMatch: 'full'

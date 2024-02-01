@@ -1,0 +1,68 @@
+
+<div class="edit-form">
+    <h2>Edit Student Profile</h2>
+    <form (submit)="addStudent()">
+      <!-- Add form fields for editing newStudent details -->
+      <!-- For example: -->
+      <div class="form-group row">
+        <label for="avatar" class="col-sm-2 col-form-label">Avatar</label>
+        <div class="col-sm-10">
+          <img [src]="newStudent.avatar" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Full Name</label>
+        <div class="col-sm-10">
+          <input type="text" id="name" name="name" class="form-control" [(ngModel)]="newStudent.name" required>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">Avatar URL</label>
+        <div class="col-sm-10">
+          <input type="text" id="avatar" name="avatar" class="form-control" [(ngModel)]="newStudent.avatar" required >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+          <input type="text" id="phone" name="phone" class="form-control" [(ngModel)]="newStudent.phone" required >
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" id="email" name="email" class="form-control" [(ngModel)]="newStudent.email" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="m1" class="col-sm-2 col-form-label">Mark in Math</label>
+        <div class="col-sm-10">
+          <input type="text" id="m1" name="m1" class="form-control" [(ngModel)]="newStudent.mark1" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="m1" class="col-sm-2 col-form-label">Mark in Computer</label>
+        <div class="col-sm-10">
+          <input type="text" id="m2" name="m2" class="form-control" [(ngModel)]="newStudent.mark2" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="m3" class="col-sm-2 col-form-label">Mark in English</label>
+        <div class="col-sm-10">
+          <input type="text" id="m3" name="m3" class="form-control" [(ngModel)]="newStudent.mark3" required>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-success btns">Add</button>
+          <button type="button" class="btn btn-secondary" (click)="cancelAdd()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  

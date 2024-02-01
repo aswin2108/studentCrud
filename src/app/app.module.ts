@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StudentsComponent } from './components/students/students.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentProfileComponent } from './components/student-profile/student-profile.component';
+import { StudentEditComponent } from './components/student-edit/student-edit.component';
+import { StudentAddComponent } from './components/student-add/student-add.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { StudentProfileComponent } from './components/student-profile/student-pr
     RegisterComponent,
     HomeComponent,
     StudentsComponent,
-    StudentProfileComponent
+    StudentProfileComponent,
+    StudentEditComponent,
+    StudentAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

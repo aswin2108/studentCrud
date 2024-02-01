@@ -38,4 +38,22 @@ export class studentService {
       })
     );
   }
+
+  updateStudentDetails(student: StudentData): Observable<StudentData> {
+    return this.http.put<StudentData>(`${this.apiUrl}/${student.id}`, student).pipe(
+      catchError((error) => {
+        console.error('Error updating student details:', error);
+        throw error;
+      })
+    );
+  }
+
+  addStudent(newStudent: StudentData): Observable<StudentData> {
+    return this.http.post<StudentData>(this.apiUrl, newStudent).pipe(
+      catchError((error) => {
+        console.error('Error adding student:', error);
+        throw error;
+      })
+    );
+  }
 }

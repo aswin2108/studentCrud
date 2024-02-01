@@ -46,6 +46,11 @@ export class StudentProfileComponent implements OnInit{
   }
 }
 
+editStudent(): void {
+  const studentId = this.student.id;
+  this.router.navigate([`/student/${studentId}/edit`]);
+}
+
 
 }
 

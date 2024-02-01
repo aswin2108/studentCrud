@@ -28,7 +28,7 @@ export class StudentsComponent implements OnInit {
     );
   }
   navigateToProfile(studentId: number): void {
-    this.router.navigate(['/profile', studentId]);
+    this.router.navigate(['/student', studentId]);
   }
 }
 

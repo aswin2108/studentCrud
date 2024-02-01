@@ -6,7 +6,7 @@ export interface StudentData{
     phone: string;
     mark1: number;
     mark2: number;
-    mark3: number;studentData
+    mark3: number;
     total: number;
     percentage: number;
     grade: string;
