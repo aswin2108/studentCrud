@@ -34,7 +34,7 @@ export class StudentAddComponent {
       (addedStudent) => {
         console.log('Student added successfully:', addedStudent);
         // Navigate back to the student list after successful addition
-        this.router.navigate(['/students']);
+        this.router.navigate(['/student']);
       },
       (error) => {
         console.error('Error adding student:', error);

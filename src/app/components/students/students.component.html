@@ -15,7 +15,7 @@
       <tbody>
         <tr *ngFor="let student of students">
           <td >{{ student.id }}</td>
-          <td><img [src]="student.avatar" alt="Avatar" width="50" height="50"></td>
+          <td><img [src]="student.avatar" style="border-radius: 30%;" alt="Avatar" width="50" height="50"></td>
           <td>{{ student.name }}</td>
           <td>
             <button class="btn btn-info" (click)="navigateToProfile(student.id)">View Profile</button>

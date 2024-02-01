@@ -50,6 +50,9 @@ editStudent(): void {
   const studentId = this.student.id;
   this.router.navigate([`/student/${studentId}/edit`]);
 }
+back():void{
+  this.router.navigate(['/student']);
+}
 
 
 }

@@ -11,8 +11,6 @@
             <div class="divider d-flex align-items-center my-4">
               <p class="text-center fw-bold mx-3 mb-0">Login Page</p>
             </div>
-  
-            <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="email" id="form3Example3" class="form-control form-control-lg"
                 placeholder="Enter a valid email address" name="email" formControlName="email" />
@@ -22,9 +20,6 @@
                 <div *ngIf="loginForm.get('email').hasError('email')">Email should be valid.</div>
             </small>
             </div>
-            
-  
-            <!-- Password input -->
             <div class="form-outline mb-3">
               <input type="password" id="form3Example4" class="form-control form-control-lg"
                 placeholder="Enter password" formControlName="password" />
@@ -33,18 +28,14 @@
                 <div *ngIf="loginForm.get('password').hasError('required')">Password is required.</div>
             </small>
             </div>
-  
-            <div class="d-flex justify-content-between align-items-center">
-              
+            <div class="d-flex justify-content-between align-items-center">  
             </div>
-  
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="button" class="btn btn-primary btn-lg"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;" name="login" [disabled]="!loginForm.valid">Login</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/register"
                   class="link-danger">Register</a></p>
             </div>
-  
           </form>
         </div>
       </div>
