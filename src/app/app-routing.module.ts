@@ -39,11 +39,8 @@ const routes: Routes = [
     component: StudentEditComponent
   },
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
-  },
-  {
     path: '**', 
-    component: ErrorPageComponent
+    component: HomeComponent
   }
 ];
 
